@@ -18,10 +18,12 @@ int main() {
     fprintf(stderr, "can't init glfw");
     exit(EXIT_FAILURE);
   }
-  int width = 300, height = 300;
+
+  int width = 444, height = 444;
   const char *title = "0";
   bool fullscreen = false;
   GLFWwindow *window;
+
   window = glfwCreateWindow(width,
                             height,
                             title,
@@ -29,6 +31,7 @@ int main() {
                             0);
   glfwMakeContextCurrent(window);
   gladLoadGL(glfwGetProcAddress);
+
   glfwSetKeyCallback(window, on_key);
   glfwSetCharCallback(window, on_char);
   glfwSetWindowSizeCallback(window, on_resize);
@@ -56,13 +59,11 @@ int main() {
                            {GL_FRAGMENT_SHADER, "shaders/triangle.frag"},
                            {0}};
   GLuint program = load_shaders(shaders);
-
   glUseProgram(program);
 
   glVertexAttribPointer(vPosition, 2, GL_FLOAT,
                         GL_FALSE, 0, BUFFER_OFFSET(0));
   glEnableVertexAttribArray(vPosition);
-
 
   do {
     glClear(GL_COLOR_BUFFER_BIT);

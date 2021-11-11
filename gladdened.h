@@ -1,6 +1,8 @@
-#ifndef __gladdened_h
-#define __gladdened_h
+#ifndef gladdened_h
+#define gladdened_h
 
+#include <error.h>
+#include <errno.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -12,4 +14,4 @@
 #include "window.h"
 #include "o_shaders.h"
 
-#endif // __gladdened_h
+#endif // gladdened_h

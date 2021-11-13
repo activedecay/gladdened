@@ -17,6 +17,3 @@ Building is easy with CLion, but I think you'd just do this:
 
     mkdir cmake-build-debug && cmake ..
     make
-
-# todo
-Ask questions in a streamer's chat (twitch.tv/strager) to see if we can do some cool shit together! :)

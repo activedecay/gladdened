@@ -8,10 +8,8 @@
 #include <stdbool.h>
 #include <malloc.h>
 
-#include <glad/gl.h>
-#include <GLFW/glfw3.h>
-
-#include "window.h"
-#include "o_shaders.h"
+#include "g_glfw.h"
+#include "o_opengl.h"
+#include "f_font.h"
 
 #endif // gladdened_h

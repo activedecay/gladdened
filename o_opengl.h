@@ -1,5 +1,5 @@
-#ifndef __o_shaders_h
-#define __o_shaders_h
+#ifndef o_opengl_h
+#define o_opengl_h
 
 #include "gladdened.h"
 
@@ -14,4 +14,5 @@ typedef struct {
 GLuint load_shaders(ShaderInfo *);
 static const GLchar *read_shader(const char *filename);
 
-#endif // __o_shaders_h
+
+#endif // o_opengl_h

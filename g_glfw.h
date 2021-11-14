@@ -1,5 +1,5 @@
-#ifndef __window_h
-#define __window_h
+#ifndef g_glfw_h
+#define g_glfw_h
 
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
@@ -12,4 +12,4 @@ void on_mouse_button(GLFWwindow* window, int button, int action, int mods); /* g
 void on_cursor_pos(GLFWwindow* window, double xpos, double ypos); /* glfwSetCursorPosCallback */
 void on_cursor_enter(GLFWwindow* window, int entered); /* glfwSetCursorEnterCallback */
 
-#endif // __window_h
+#endif // g_glfw_h

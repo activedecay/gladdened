@@ -1,4 +1,4 @@
-#include "o_shaders.h"
+#include "o_opengl.h"
 
 const GLchar * read_shader(const char *filename) {
 #ifdef WIN32

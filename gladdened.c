@@ -17,6 +17,7 @@ enum Attrib_IDs {
 bool fullscreen = false;
 
 int main() {
+
   if (!glfwInit()) {
     fprintf(stderr, "can't init glfw");
     exit(EXIT_FAILURE);
@@ -43,6 +44,21 @@ int main() {
   glfwSetCursorPosCallback(window, on_cursor_pos);
   glfwSetCursorEnterCallback(window, on_cursor_enter);
 
+  enum TextureIds {
+    Fonts, NumTextures,
+  };
+  GLuint textures[NumTextures] = {};
+  GLint data;
+  glGetIntegerv(GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS, &data);
+  int gl_texture_unit = GL_TEXTURE0;
+  glActiveTexture(gl_texture_unit);
+  glGenTextures(1, textures);
+  glBindTexture(GL_TEXTURE_2D, textures[Fonts]);
+  glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+  // 23, 940 are from the stdout when I ran this before; lul!
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, 940, 23, 0, GL_ALPHA, GL_UNSIGNED_BYTE, 0);
+  fonts_init(gl_texture_unit);
+  exit(9);
   glGenVertexArrays(NumVAOs, VAOs);
   glBindVertexArray(VAOs[Triangles]);
 

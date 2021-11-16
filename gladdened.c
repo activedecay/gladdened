@@ -58,7 +58,6 @@ int main() {
   // 23, 940 are from the stdout when I ran this before; lul!
   glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, 940, 23, 0, GL_ALPHA, GL_UNSIGNED_BYTE, 0);
   fonts_init(gl_texture_unit);
-  exit(9);
   glGenVertexArrays(NumVAOs, VAOs);
   glBindVertexArray(VAOs[Triangles]);
 
@@ -122,6 +121,6 @@ void on_resize(GLFWwindow *window, int width, int height) {
 
 void on_mouse_button(GLFWwindow *window, int button, int action, int mods) {}
 
-void on_cursor_pos(GLFWwindow *window, double xpos, double ypos) {}
+void on_cursor_pos(GLFWwindow *window, double x_pos, double y_pos) {}
 
 void on_cursor_enter(GLFWwindow *window, int entered) {}
